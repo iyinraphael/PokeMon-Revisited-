@@ -14,6 +14,7 @@
 		EB032AAA21BDD588002FA159 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB032AA921BDD588002FA159 /* TableViewController.swift */; };
 		EB032AAC21BDD5A3002FA159 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB032AAB21BDD5A3002FA159 /* SearchViewController.swift */; };
 		EB032AAE21BDD5DA002FA159 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB032AAD21BDD5DA002FA159 /* DetailViewController.swift */; };
+		EB032AB021BDDA2A002FA159 /* PokeMon.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB032AAF21BDDA2A002FA159 /* PokeMon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		EB032AA921BDD588002FA159 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		EB032AAB21BDD5A3002FA159 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		EB032AAD21BDD5DA002FA159 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		EB032AAF21BDDA2A002FA159 /* PokeMon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeMon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 		EB032AA721BDC8D3002FA159 /* Model COntroller */ = {
 			isa = PBXGroup;
 			children = (
+				EB032AAF21BDDA2A002FA159 /* PokeMon.swift */,
 			);
 			path = "Model COntroller";
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB032AB021BDDA2A002FA159 /* PokeMon.swift in Sources */,
 				EB032AAC21BDD5A3002FA159 /* SearchViewController.swift in Sources */,
 				EB032A9521BDC84A002FA159 /* AppDelegate.swift in Sources */,
 				EB032AAA21BDD588002FA159 /* TableViewController.swift in Sources */,

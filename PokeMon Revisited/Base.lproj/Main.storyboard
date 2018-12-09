@@ -14,7 +14,7 @@
         <!--Pokedex-->
         <scene sceneID="G4C-sC-LZt">
             <objects>
-                <tableViewController id="loU-Dy-lyI" sceneMemberID="viewController">
+                <tableViewController id="loU-Dy-lyI" customClass="TableViewController" customModule="PokeMon_Revisited" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="k5q-eT-3Mq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -52,7 +52,7 @@
         <!--Title-->
         <scene sceneID="fG0-Zx-goj">
             <objects>
-                <viewController id="Czt-ru-nFI" sceneMemberID="viewController">
+                <viewController id="Czt-ru-nFI" customClass="SearchViewController" customModule="PokeMon_Revisited" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gXd-Uv-pHt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -117,6 +117,14 @@
                         <viewLayoutGuide key="safeArea" id="ZcH-1j-bg0"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="XHA-Xg-g0T"/>
+                    <connections>
+                        <outlet property="abilitiesLabel" destination="aSw-4A-org" id="ZYl-aq-rz5"/>
+                        <outlet property="idLabel" destination="hAA-uQ-pAf" id="vqD-9H-eBf"/>
+                        <outlet property="imageView" destination="NnU-Ew-CxE" id="aoo-6F-b5c"/>
+                        <outlet property="nameLabel" destination="dWd-Do-lp0" id="8p8-8c-5rO"/>
+                        <outlet property="searchBar" destination="pSh-OV-gts" id="2O1-8J-MZW"/>
+                        <outlet property="typeLabel" destination="fVu-22-jow" id="LrI-Mc-TkV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7fc-GD-hNN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -125,7 +133,7 @@
         <!--Title-->
         <scene sceneID="bNb-8y-rgc">
             <objects>
-                <viewController id="Eob-Re-HF3" sceneMemberID="viewController">
+                <viewController id="Eob-Re-HF3" customClass="DetailViewController" customModule="PokeMon_Revisited" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bT5-Ho-aQl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -178,6 +186,13 @@
                         <viewLayoutGuide key="safeArea" id="c65-Em-MPc"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="LVW-07-Z5h"/>
+                    <connections>
+                        <outlet property="IDLabel" destination="JsX-0a-bh3" id="kLB-lS-mJA"/>
+                        <outlet property="abilitiesLabel" destination="Jds-zc-Kx3" id="e0J-w9-Ch6"/>
+                        <outlet property="imageView" destination="Vke-WL-I1Q" id="aMZ-PC-aBL"/>
+                        <outlet property="nameLabel" destination="6qV-hI-mjh" id="huV-eH-rbC"/>
+                        <outlet property="typeLabel" destination="Jds-zc-Kx3" id="UN6-IT-gZP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eSg-4G-toA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

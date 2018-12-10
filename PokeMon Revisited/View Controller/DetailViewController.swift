@@ -12,9 +12,22 @@ class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        updateView()
     }
+    
+    var pokemon: PokeMon?
+    
+    func updateView() {
+
+        guard isViewLoaded, let pokemon = pokemon else {return}
+        
+        nameLabel.text = pokemon.name
+        IDLabel.text = String(pokemon.id)
+        typeLabel.text = pokemon.types[0].type[0].name
+        abilitiesLabel.text = pokemon.abilities[0].ability[0].name
+        imageView.image = UIImage(named: pokemon.sprites[0].frontDefault)
+    }
+    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var IDLabel: UILabel!
     @IBOutlet weak var typeLabel: UILabel!

@@ -13,9 +13,8 @@ class Networking {
     let baseURL = URL(string: "http://pokeapi.co/api/v2/pokemon")!
     
     var pokemon: PokeMon?
-    var pokemons = [PokeMon]()
     
-    func fetchAPI(searchTerm: String, completion: @escaping ([PokeMon]?, Error?) -> Void ) {
+    func fetchAPI(searchTerm: String, completion: @escaping (PokeMon?, Error?) -> Void ) {
         
         guard var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: true) else {
             fatalError("Unable to resolve baseURL to components")
@@ -47,6 +46,7 @@ class Networking {
                 jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
                 let pokemon = try jsonDecoder.decode(PokeMon.self, from: data)
                 self.pokemon = pokemon
+                completion(pokemon, nil)
             } catch {
                 NSLog("Unable to decode data into people: \(error)")
                 completion(nil,error)

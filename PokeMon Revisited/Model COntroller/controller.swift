@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Networking {
+extension Model {
     
     var pokemonListURL: URL?{
         

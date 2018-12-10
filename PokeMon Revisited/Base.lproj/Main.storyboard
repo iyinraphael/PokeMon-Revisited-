@@ -28,7 +28,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Eob-Re-HF3" kind="show" id="9CP-yy-Fyz"/>
+                                    <segue destination="Eob-Re-HF3" kind="show" identifier="showDetail" id="9CP-yy-Fyz"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -103,14 +103,25 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RWw-UT-iI6">
+                                <rect key="frame" x="164" y="424" width="46" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="save:" destination="Czt-ru-nFI" eventType="touchUpInside" id="34g-jR-7BQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="ZcH-1j-bg0" firstAttribute="bottom" secondItem="RWw-UT-iI6" secondAttribute="bottom" constant="213" id="22p-gg-nZ0"/>
                             <constraint firstItem="pSh-OV-gts" firstAttribute="leading" secondItem="ZcH-1j-bg0" secondAttribute="leading" id="9iO-CA-xqI"/>
                             <constraint firstItem="pSh-OV-gts" firstAttribute="top" secondItem="ZcH-1j-bg0" secondAttribute="top" id="CID-HE-vGN"/>
                             <constraint firstItem="8xa-kb-Et6" firstAttribute="top" secondItem="pSh-OV-gts" secondAttribute="bottom" constant="20" id="JZi-oI-M5y"/>
                             <constraint firstItem="8xa-kb-Et6" firstAttribute="leading" secondItem="ZcH-1j-bg0" secondAttribute="leading" constant="8" id="RBi-ew-Gic"/>
+                            <constraint firstItem="ZcH-1j-bg0" firstAttribute="trailing" secondItem="RWw-UT-iI6" secondAttribute="trailing" constant="165" id="RvA-yG-3S6"/>
+                            <constraint firstItem="RWw-UT-iI6" firstAttribute="top" secondItem="8xa-kb-Et6" secondAttribute="bottom" constant="25.5" id="ZjG-fy-YK0"/>
                             <constraint firstItem="ZcH-1j-bg0" firstAttribute="bottom" secondItem="8xa-kb-Et6" secondAttribute="bottom" constant="268.5" id="cKp-Hg-esL"/>
+                            <constraint firstItem="RWw-UT-iI6" firstAttribute="leading" secondItem="ZcH-1j-bg0" secondAttribute="leading" constant="164" id="dzM-9t-rHt"/>
                             <constraint firstItem="ZcH-1j-bg0" firstAttribute="trailing" secondItem="8xa-kb-Et6" secondAttribute="trailing" constant="8" id="osj-nZ-D39"/>
                             <constraint firstItem="pSh-OV-gts" firstAttribute="trailing" secondItem="ZcH-1j-bg0" secondAttribute="trailing" id="uKn-jv-TWH"/>
                         </constraints>

@@ -10,15 +10,10 @@ import Foundation
 
 class Model {
     
-    var pokemon: PokeMon?
     var pokemons = [PokeMon]()
     let networking = Networking()
     
-    func add(pokemonName: String) {
-        networking.fetchAPI(searchTerm: pokemonName) { (pokemon, error) in
-            self.pokemon = pokemon
-        }
-        guard let pokemon = pokemon else {return}
+    func add(pokemon: PokeMon) {
         pokemons.append(pokemon)
         saveToPersistence()
     }

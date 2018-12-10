@@ -25,7 +25,7 @@ class Networking {
         
         guard let searchResult = urlComponents.url else {
             NSLog("Error constructing url with \(searchTerm)")
-            completion(nil, NSError())
+            return
         }
         
         var request = URLRequest(url: searchResult)

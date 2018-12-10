@@ -20,10 +20,22 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
             updateView()
         }
     }
-    let model = Model()
+    let network = Networking()
+    var model: Model?
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-         guard let pokeName = searchBar.text, !pokeName.isEmpty else {return}
-        model.add(pokemonName: pokeName)
+         guard let pokemon = searchBar.text, !pokemon.isEmpty else {return}
+        network.fetchAPI(searchTerm: pokemon) { (pokemon, error) in
+            self.pokemon = pokemon
+            
+            DispatchQueue.main.async {
+                self.updateView()
+            }
+        }
+    }
+    
+    @IBAction func save(_ sender: Any) {
+        guard let pokemon = pokemon else {return}
+        model?.add(pokemon: pokemon)
     }
     
     func updateView() {

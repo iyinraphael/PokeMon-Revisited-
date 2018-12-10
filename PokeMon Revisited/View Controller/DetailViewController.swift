@@ -16,9 +16,10 @@ class DetailViewController: UIViewController {
     }
     
     var pokemon: PokeMon?
+    var Model: Model?
     
     func updateView() {
-
+        
         guard isViewLoaded, let pokemon = pokemon else {return}
         
         nameLabel.text = pokemon.name

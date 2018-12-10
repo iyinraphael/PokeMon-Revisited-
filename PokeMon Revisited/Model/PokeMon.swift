@@ -12,8 +12,10 @@ struct PokeMon: Codable {
     let name: String
     let id: Int
     let abilities: [Abilities]
+    
     struct Abilities: Codable {
         let ability: [Ability]
+        
         struct Ability: Codable {
             let name: String
         }

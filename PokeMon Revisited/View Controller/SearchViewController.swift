@@ -8,12 +8,33 @@
 
 import UIKit
 
-class SearchViewController: UIViewController {
+class SearchViewController: UIViewController, UISearchBarDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        searchBar.delegate = self
+    }
+    
+    var pokemon: PokeMon?{
+        didSet {
+            updateView()
+        }
+    }
+    let model = Model()
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+         guard let pokeName = searchBar.text, !pokeName.isEmpty else {return}
+        model.add(pokemonName: pokeName)
+    }
+    
+    func updateView() {
+    
+        guard let pokemon = pokemon else {return}
+        
+        nameLabel.text = pokemon.name
+        idLabel.text = String(pokemon.id)
+        typeLabel.text = pokemon.types[0].type[0].name
+        abilitiesLabel.text = pokemon.abilities[0].ability[0].name
+        imageView.image = UIImage(named: pokemon.sprites[0].frontDefault)
     }
     
     @IBOutlet weak var searchBar: UISearchBar!

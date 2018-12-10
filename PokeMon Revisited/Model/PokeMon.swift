@@ -7,7 +7,7 @@
 //
 
 import Foundation
-struct PokeMon: Decodable {
+struct PokeMon: Codable {
     
     let name: String
     let id: Int
